@@ -1,0 +1,18 @@
+server:
+  port: 7000
+
+spring:
+  application:
+    name: eureka
+  security:
+    user:
+      name: user
+      password: 123456
+
+#Eureka 单机配置
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://user:123456@localhost:${server.port}/eureka

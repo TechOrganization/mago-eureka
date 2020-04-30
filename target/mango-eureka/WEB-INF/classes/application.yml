@@ -1,0 +1,18 @@
+server:
+  port: 7000
+
+
+#Eureka 单机配置
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://user:123@localhost:7000/eureka
+
+security:
+  basic:
+    enabled: true
+  user:
+    name: user
+    password: 123
